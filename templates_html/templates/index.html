@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}   Home Page {% endblock %}
+{% block content %} 
+
+    <h1>Welcome {{ name }} to {{ page }} page</h1>
+    <p>You are {{ greetings}}</p>
+    <ul>
+        {% for item in my_list %}
+            {% if item == 'apple' %}
+                <li style="color: red">{{ item }}</li>
+            {% else %}
+                <li>{{ item }}</li>
+            {% endif %}
+        {% endfor%}
+    </ul>
+{% endblock%}
